@@ -1,0 +1,17 @@
+<div *ngIf="students; else errr">
+  <label for="">Name</label>
+  <input type="text" [value]="students.name" #name />
+  <br />
+  <label for="">Age</label>
+  <input type="text" [value]="students.age" #age />
+  <br />
+  <label for="">Email</label>
+  <input type="text" [value]="students.email" #email/>
+  <br />
+  <label for="">Phone</label>
+  <input type="text" [value]="students.phone" #phone/>
+  <br />
+  <button (click)="updateStd(name.value,age.value,email.value,phone.value)"> Update</button>
+</div>
+
+<ng-template #errr> loding... </ng-template>
